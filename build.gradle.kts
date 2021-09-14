@@ -17,8 +17,10 @@ repositories {
 }
 
 dependencies {
+    implementation("com.lambdaworks:scrypt:1.4.0")
+    implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.5.21")
+
     implementation(compose.desktop.currentOs)
-    implementation(kotlin("stdlib-jdk8"))
 }
 
 tasks.withType<KotlinCompile>() {
