@@ -17,10 +17,15 @@ repositories {
 }
 
 dependencies {
+    implementation(compose.desktop.currentOs)
+
+    implementation("com.arkivanov.decompose:decompose:0.3.1")
+    implementation("com.arkivanov.decompose:extensions-compose-jetbrains:0.3.1")
+
     implementation("com.lambdaworks:scrypt:1.4.0")
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.5.21")
 
-    implementation(compose.desktop.currentOs)
+    implementation("com.sksamuel.hoplite:hoplite-yaml:1.4.7")
 }
 
 tasks.withType<KotlinCompile>() {
