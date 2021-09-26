@@ -1,0 +1,4 @@
+login.password=Passwort
+login.password.repeat=Passwort wiederholen
+login.button.register=Registrieren
+login.button.login=Anmelden
