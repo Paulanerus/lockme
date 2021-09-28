@@ -25,7 +25,7 @@ dependencies {
     implementation("com.lambdaworks:scrypt:1.4.0")
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.5.21")
 
-    implementation("com.sksamuel.hoplite:hoplite-yaml:1.4.7")
+    implementation("com.fasterxml.jackson.module:jackson-module-kotlin:2.12.5")
 }
 
 tasks.withType<KotlinCompile>() {

@@ -34,8 +34,6 @@ object Translator {
                     }
             }
         }
-
-        println("${languages.size} language files were found!")
     }
 
     fun from(value: String): String {
