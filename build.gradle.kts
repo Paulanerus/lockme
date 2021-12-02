@@ -3,8 +3,8 @@ import org.jetbrains.compose.desktop.application.dsl.TargetFormat
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
-    kotlin("jvm") version "1.5.21"
-    id("org.jetbrains.compose") version "1.0.0-alpha3"
+    kotlin("jvm") version "1.5.31"
+    id("org.jetbrains.compose") version "1.0.0"
 }
 
 group = "pw.paul"
@@ -19,8 +19,8 @@ repositories {
 dependencies {
     implementation(compose.desktop.currentOs)
 
-    implementation("com.arkivanov.decompose:decompose:0.3.1")
-    implementation("com.arkivanov.decompose:extensions-compose-jetbrains:0.3.1")
+    implementation("com.arkivanov.decompose:decompose:0.4.0")
+    implementation("com.arkivanov.decompose:extensions-compose-jetbrains:0.4.0")
 
     implementation("com.lambdaworks:scrypt:1.4.0")
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.5.21")
