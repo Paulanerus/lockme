@@ -2,8 +2,10 @@ package pw.paul.config.repository
 
 import com.fasterxml.jackson.module.kotlin.readValue
 import pw.paul.config.model.Setting
+import pw.paul.services.io.appDir
 import pw.paul.services.io.configFile
 import pw.paul.services.io.mapper
+import kotlin.io.path.createDirectories
 import kotlin.io.path.createFile
 import kotlin.io.path.notExists
 import kotlin.io.path.readBytes
@@ -17,6 +19,8 @@ object ConfigRepository {
     fun save() = mapper.writeValue(configFile.toFile(), settings)
 
     fun load() {
+        if(appDir.notExists()) appDir.createDirectories()
+
         if (configFile.notExists()) configFile.createFile()
 
         if (configFile.notExists().or(configFile.readBytes().isEmpty())) save()

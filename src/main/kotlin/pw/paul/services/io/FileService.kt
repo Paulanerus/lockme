@@ -31,7 +31,9 @@ private fun dir(): Path {
         .isNullOrBlank()
     ) System.getenv("APPDATA") else System.getProperty("lockme.dir")
 
-    return Path(path) / "LockMe"
+    val sub = Path(path) / "LockMe"
+
+    return sub.createDirectories()
 }
 
 fun collectItems() {
