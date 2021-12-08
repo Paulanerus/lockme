@@ -37,6 +37,8 @@ private fun dir(): Path {
 }
 
 fun collectItems() {
+    if(vaultDir.notExists()) vaultDir.createDirectories()
+
     Files.list(vaultDir).forEach { path ->
         val entry = readEntry(path)
 
